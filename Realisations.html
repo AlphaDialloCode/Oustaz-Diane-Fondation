@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations — Oustaz Diané Fondation</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="realisations.css">
+  <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
+</head>
+<body class="lang-fr">
+
+  <!-- LANG BAR -->
+  <div class="lang-bar">
+    <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">
+      <span class="logo-name">Oustaz Diané</span>
+      <span class="logo-sub fr">Fondation Humanitaire</span>
+      <span class="logo-sub en">Humanitarian Foundation</span>
+    </a>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html#mission" class="fr">Mission</a>
+        <a href="index.html#mission" class="en">Mission</a>
+      </li>
+      <li><a href="index.html#impact">Impact</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li>
+        <a href="index.html#temoignages" class="fr">Témoignages</a>
+        <a href="index.html#temoignages" class="en">Testimonials</a>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li>
+        <a href="index.html#don" class="nav-don fr">Faire un don</a>
+        <a href="index.html#don" class="nav-don en">Donate</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO TEXTE -->
+  <section class="real-hero">
+    <div class="real-hero-inner">
+      <p class="real-hero-tag fr">Nos réalisations</p>
+      <p class="real-hero-tag en">Our achievements</p>
+      <h1 class="real-hero-title">
+        <span class="fr">Ce que nous avons<br><em>accompli ensemble.</em></span>
+        <span class="en">What we have<br><em>achieved together.</em></span>
+      </h1>
+      <p class="real-hero-sub fr">
+        Depuis sa création, la Fondation Oustaz Diané a mené des dizaines d'actions concrètes sur le terrain. Chaque projet est une victoire pour l'islam, un pas de plus vers un monde plus juste. Découvrez ici nos réalisations en images et en vidéos.
+      </p>
+      <p class="real-hero-sub en">
+        Since its founding, the Oustaz Diané Foundation has carried out dozens of concrete actions in the field. Each project is a victory for islam, one more step toward a fairer world. Explore our achievements through photos and videos.
+      </p>
+      <div class="real-hero-stats">
+        <div class="rh-stat">
+          <span class="rh-n">10+</span>
+          <span class="rh-l fr">Projets menés</span>
+          <span class="rh-l en">Projects led</span>
+        </div>
+        <div class="rh-stat">
+          <span class="rh-n">12+</span>
+          <span class="rh-l fr">Villages touchés</span>
+          <span class="rh-l en">Villages reached</span>
+        </div>
+        <div class="rh-stat">
+          <span class="rh-n">25K+</span>
+          <span class="rh-l fr">Vies changées</span>
+          <span class="rh-l en">Lives changed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE PHOTOS -->
+  <section class="real-section">
+    <div class="real-section-header">
+      <p class="s-label fr">Galerie photos</p>
+      <p class="s-label en">Photo gallery</p>
+      <h2 class="s-title">
+        <span class="fr">Le terrain<br>en images.</span>
+        <span class="en">The field<br>in pictures.</span>
+      </h2>
+      <p class="s-sub fr">Des moments capturés au cœur de nos actions humanitaires.</p>
+      <p class="s-sub en">Moments captured at the heart of our humanitarian actions.</p>
+    </div>
+
+    <!-- FILTRES -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">
+        <span class="fr">Tout voir</span><span class="en">All</span>
+      </button>
+      <button class="filter-btn" onclick="filterGallery('Puits simples', this)">
+        <span class="fr">Puits simples</span><span class="en">Simple Wells</span>
+      </button>
+      <button class="filter-btn" onclick="filterGallery('Puits chateaux', this)">
+        <span class="fr">Puits chateaux</span><span class="en">complex Wells</span>
+      </button>
+      <button class="filter-btn" onclick="filterGallery('Forages', this)">
+        <span class="fr">Forages</span><span class="en">Boreholes</span>
+      </button>
+      <button class="filter-btn" onclick="filterGallery('Mosquees', this)">
+        <span class="fr">Mosquees</span><span class="en">Mosques</span>
+      </button>
+    </div>
+
+    <!-- GRILLE PHOTOS -->
+    <div class="photo-grid" id="photoGrid">
+
+      <div class="photo-card" data-cat="alimentaire">
+        <div class="photo-wrap">
+          <img src="photos/photo1.jpg" alt="Distribution alimentaire" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Alimentation</span>
+            <span class="photo-cat en">Food</span>
+            <p class="photo-caption fr">Distribution de repas — Conakry, 2024</p>
+            <p class="photo-caption en">Meal distribution — Conakry, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="logement">
+        <div class="photo-wrap">
+          <img src="photos/photo2.jpg" alt="Construction logement" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Logement</span>
+            <span class="photo-cat en">Housing</span>
+            <p class="photo-caption fr">Reconstruction de foyers — Abidjan, 2023</p>
+            <p class="photo-caption en">Home reconstruction — Abidjan, 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="sante">
+        <div class="photo-wrap">
+          <img src="photos/photo3.jpg" alt="Soins médicaux" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Santé</span>
+            <span class="photo-cat en">Health</span>
+            <p class="photo-caption fr">Consultation médicale gratuite — Dakar, 2024</p>
+            <p class="photo-caption en">Free medical consultation — Dakar, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="education">
+        <div class="photo-wrap">
+          <img src="photos/photo4.jpg" alt="École" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Éducation</span>
+            <span class="photo-cat en">Education</span>
+            <p class="photo-caption fr">Fournitures scolaires — Bamako, 2023</p>
+            <p class="photo-caption en">School supplies — Bamako, 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="alimentaire">
+        <div class="photo-wrap">
+          <img src="photos/photo5.jpg" alt="Colis alimentaires" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Alimentation</span>
+            <span class="photo-cat en">Food</span>
+            <p class="photo-caption fr">Remise de colis — Lomé, 2024</p>
+            <p class="photo-caption en">Food parcels handout — Lomé, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="sante">
+        <div class="photo-wrap">
+          <img src="photos/photo6.jpg" alt="Médicaments" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Santé</span>
+            <span class="photo-cat en">Health</span>
+            <p class="photo-caption fr">Don de médicaments — Cotonou, 2023</p>
+            <p class="photo-caption en">Medication donation — Cotonou, 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="logement">
+        <div class="photo-wrap">
+          <img src="photos/photo7.jpg" alt="Abris d'urgence" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Logement</span>
+            <span class="photo-cat en">Housing</span>
+            <p class="photo-caption fr">Abris d'urgence — Niamey, 2024</p>
+            <p class="photo-caption en">Emergency shelters — Niamey, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="education">
+        <div class="photo-wrap">
+          <img src="photos/photo8.jpg" alt="Cours" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Éducation</span>
+            <span class="photo-cat en">Education</span>
+            <p class="photo-caption fr">Cours de soutien — Ouagadougou, 2024</p>
+            <p class="photo-caption en">Tutoring sessions — Ouagadougou, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="alimentaire">
+        <div class="photo-wrap">
+          <img src="photos/photo9.jpg" alt="Repas collectif" loading="lazy">
+          <div class="photo-overlay">
+            <span class="photo-cat fr">Alimentation</span>
+            <span class="photo-cat en">Food</span>
+            <p class="photo-caption fr">Repas collectif — Accra, 2023</p>
+            <p class="photo-caption en">Community meal — Accra, 2023</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALERIE VIDEOS -->
+  <section class="real-section real-section-dark">
+    <div class="real-section-header">
+      <p class="s-label fr">Galerie vidéos</p>
+      <p class="s-label en">Video gallery</p>
+      <h2 class="s-title s-title-light">
+        <span class="fr">Nos actions<br>en mouvement.</span>
+        <span class="en">Our actions<br>in motion.</span>
+      </h2>
+      <p class="s-sub s-sub-light fr">Revivez nos missions humanitaires à travers ces témoignages et reportages vidéo.</p>
+      <p class="s-sub s-sub-light en">Relive our humanitarian missions through these video testimonials and reports.</p>
+    </div>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <!-- Remplace le src par ton lien YouTube ou chemin vidéo local -->
+          <iframe
+            src="https://youtu.be/pDzMYDMZWrw?si=43Na6ai5OaPex4hn"
+            title="Reportage distribution alimentaire"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag fr">Alimentation</span>
+          <span class="video-tag en">Food</span>
+          <h3 class="video-title fr">Distribution alimentaire — Conakry 2024</h3>
+          <h3 class="video-title en">Food distribution — Conakry 2024</h3>
+          <p class="video-desc fr">Reportage complet sur notre programme de distribution de repas auprès de 500 familles dans les quartiers défavorisés de Conakry.</p>
+          <p class="video-desc en">Full report on our meal distribution program reaching 500 families in underprivileged neighborhoods of Conakry.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_2"
+            title="Témoignages bénéficiaires"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag fr">Témoignages</span>
+          <span class="video-tag en">Testimonials</span>
+          <h3 class="video-title fr">Ils témoignent — Abidjan 2023</h3>
+          <h3 class="video-title en">Their stories — Abidjan 2023</h3>
+          <p class="video-desc fr">Des bénéficiaires racontent comment la Fondation a transformé leur quotidien et redonné espoir à leurs familles.</p>
+          <p class="video-desc en">Beneficiaries share how the Foundation transformed their daily lives and restored hope for their families.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_3"
+            title="Construction logements"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag fr">Logement</span>
+          <span class="video-tag en">Housing</span>
+          <h3 class="video-title fr">Reconstruction de foyers — Dakar 2024</h3>
+          <h3 class="video-title en">Home rebuilding — Dakar 2024</h3>
+          <p class="video-desc fr">Suivez notre équipe sur le chantier de reconstruction de 30 maisons pour des familles sinistrées à Dakar.</p>
+          <p class="video-desc en">Follow our team on the construction site rebuilding 30 homes for disaster-affected families in Dakar.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_4"
+            title="Mission médicale"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag fr">Santé</span>
+          <span class="video-tag en">Health</span>
+          <h3 class="video-title fr">Mission médicale — Bamako 2023</h3>
+          <h3 class="video-title en">Medical mission — Bamako 2023</h3>
+          <p class="video-desc fr">Retour sur notre mission médicale gratuite à Bamako : plus de 300 consultations en 3 jours.</p>
+          <p class="video-desc en">Looking back at our free medical mission in Bamako: over 300 consultations in 3 days.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BAS DE PAGE -->
+  <section class="real-cta">
+    <h2 class="real-cta-title fr">Vous aussi, participez<br>à nos prochaines actions.</h2>
+    <h2 class="real-cta-title en">Join us and support<br>our next missions.</h2>
+    <p class="real-cta-sub fr">Chaque don, aussi modeste soit-il, permet de financer de nouveaux projets sur le terrain.</p>
+    <p class="real-cta-sub en">Every donation, no matter how small, helps fund new field projects.</p>
+    <div class="real-cta-btns">
+      <a href="index.html#don" class="btn-fill fr">Faire un don</a>
+      <a href="index.html#don" class="btn-fill en">Donate now</a>
+      <a href="index.html#contact" class="btn-cta-outline fr">Nous contacter</a>
+      <a href="index.html#contact" class="btn-cta-outline en">Contact us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-logo">Oustaz Diané <span>Fondation</span></div>
+    <p class="f-copy fr">© 2025 Oustaz Diané Fondation. Tous droits réservés.</p>
+    <p class="f-copy en">© 2025 Oustaz Diané Foundation. All rights reserved.</p>
+    <ul class="f-links">
+      <li><a href="index.html#mission">Mission</a></li>
+      <li><a href="index.html#impact">Impact</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    // Language toggle
+    function setLang(lang) {
+      document.body.classList.toggle('lang-fr', lang === 'fr');
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && lang === 'fr') || (i === 1 && lang === 'en'));
+      });
+    }
+
+    // Filtre galerie photos
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.photo-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'block';
+          setTimeout(() => card.style.opacity = '1', 10);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      });
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
